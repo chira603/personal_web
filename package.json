@@ -3,14 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://chiragkumar-patel.github.io/portfolio",
+  "homepage": "https://chira603.github.io/personal_web",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r git@github.com:chira603/personal_web.git",
+    "netlify": "netlify deploy --dir=dist",
+    "surge": "surge dist",
+    "serve": "serve -s dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -32,6 +35,9 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
+    "netlify-cli": "^20.0.2",
+    "serve": "^14.2.4",
+    "surge": "^0.24.6",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
