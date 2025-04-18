@@ -1,0 +1,11 @@
+--2025-04-17 05:52:17--  https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3
+Resolving images.unsplash.com (images.unsplash.com)... 146.75.46.208, 2a04:4e42:42::720
+Connecting to images.unsplash.com (images.unsplash.com)|146.75.46.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1516947 (1.4M) [image/jpeg]
+Saving to: ‘src/assets/images/finance.jpg’
+
+src/assets/images/finance.jpg              0%[                                                                                  ]       0  --.-KB/s               src/assets/images/finance.jpg              5%[===>                                                                              ]  76.63K   378KB/s               src/assets/images/finance.jpg             15%[============>                                                                     ] 236.63K   571KB/s               src/assets/images/finance.jpg             34%[===========================>                                                      ] 508.63K   814KB/s               src/assets/images/finance.jpg             54%[===========================================>                                      ] 812.63K   978KB/s               src/assets/images/finance.jpg             78%[===============================================================>                  ]   1.14M  1.10MB/s               src/assets/images/finance.jpg            100%[=================================================================================>]   1.45M  1.20MB/s    in 1.2s    
+
+2025-04-17 05:52:18 (1.20 MB/s) - ‘src/assets/images/finance.jpg’ saved [1516947/1516947]
+

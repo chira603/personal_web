@@ -1,0 +1,190 @@
+/* Trading Portfolio Specific Styles */
+
+/* Toolbar spacing for fixed header */
+.MuiToolbar-root {
+  min-height: 64px;
+}
+
+/* Add padding to account for fixed header */
+main {
+  padding-top: 64px;
+}
+
+/* Glowing text effect */
+.glow-text {
+  text-shadow: 0 0 10px rgba(0, 200, 83, 0.7), 0 0 20px rgba(0, 200, 83, 0.5), 0 0 30px rgba(0, 200, 83, 0.3);
+  animation: glow-pulse 3s infinite alternate;
+}
+
+@keyframes glow-pulse {
+  0% { text-shadow: 0 0 10px rgba(0, 200, 83, 0.7), 0 0 20px rgba(0, 200, 83, 0.5); }
+  100% { text-shadow: 0 0 15px rgba(0, 200, 83, 0.9), 0 0 25px rgba(0, 200, 83, 0.7), 0 0 35px rgba(0, 200, 83, 0.5); }
+}
+
+/* Shining border effect */
+.shine-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-border::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(30deg);
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  100% { transform: translateX(100%) rotate(30deg); }
+}
+
+/* Terminal-like elements */
+.terminal-box {
+  border: 1px solid rgba(0, 200, 83, 0.3);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: 'Roboto Mono', monospace;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-header {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-content {
+  padding: 16px;
+  height: 100%;
+}
+
+/* Trading chart animations */
+.chart-line {
+  position: relative;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 200, 83, 0.5) 0%, rgba(0, 200, 83, 1) 100%);
+}
+
+.chart-line::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00C853;
+  right: -4px;
+  top: -3px;
+  box-shadow: 0 0 10px rgba(0, 200, 83, 0.8);
+}
+
+.chart-line.down {
+  background: linear-gradient(90deg, rgba(255, 61, 0, 0.5) 0%, rgba(255, 61, 0, 1) 100%);
+}
+
+.chart-line.down::before {
+  background-color: #FF3D00;
+  box-shadow: 0 0 10px rgba(255, 61, 0, 0.8);
+}
+
+/* Candlestick styling */
+.candlestick {
+  display: inline-block;
+  width: 4px;
+  background-color: #00C853;
+  margin: 0 4px;
+  position: relative;
+}
+
+.candlestick::before,
+.candlestick::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: transparent;
+  border: 1px solid #00C853;
+  left: -1px;
+}
+
+.candlestick.down {
+  background-color: #FF3D00;
+}
+
+.candlestick.down::before,
+.candlestick.down::after {
+  border-color: #FF3D00;
+}
+
+/* Blinking cursor animation */
+.blinking-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: #00C853;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Typing animation */
+.typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #00C853;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00C853 }
+}
+
+/* Data visualization elements */
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  gap: 4px;
+}
+
+.data-cell {
+  height: 30px;
+  background-color: rgba(0, 200, 83, 0.1);
+  border: 1px solid rgba(0, 200, 83, 0.3);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.data-cell:hover {
+  background-color: rgba(0, 200, 83, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .MuiToolbar-root {
+    min-height: 56px;
+  }
+
+  main {
+    padding-top: 56px;
+  }
+
+  #home, #about, #skills, #portfolio, #contact {
+    scroll-margin-top: 56px;
+  }
+}
